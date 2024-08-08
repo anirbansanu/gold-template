@@ -140,7 +140,6 @@ body {
   color: var(--theme-color);
   border: 2px solid var(--text-gold);
   font-weight: bold;
-  padding: 10px 20px;
   border-radius: 6px;
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow: hidden;
@@ -153,7 +152,7 @@ body {
 }
 @keyframes moveDown {
   0% {
-    transform: translateY(-35px);
+    transform: translateY(-36px);
   }
   99% {
     transform: translateY(35px);
@@ -234,4 +233,89 @@ body {
 
 .footer a:hover {
   text-decoration: underline;
+}
+.about-header {
+    background: url('your-image-path.jpg') no-repeat center center/cover;
+    color: var(--text-color);
+    padding: 100px 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.about-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.about-header p {
+    font-size: 1.25rem;
+}
+
+.about {
+    padding: 50px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h2,
+.about h3 {
+    color: var(--theme-color);
+    text-shadow: 0 0 var(--text-blur) var(--text-glow) var(--text-color);
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.cart {
+    background-color: #111;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.cart h2 {
+    color: var(--text-gold);
+    margin-bottom: 20px;
+    text-shadow: 0 0 var(--text-blur) var(--text-glow) var(--text-color);
+}
+
+.cart-item {
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.cart-item h3 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    text-shadow: 0 0 var(--text-blur) var(--text-glow) var(--text-color);
+}
+
+.cart-item p {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.cart-item .quantity {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item .quantity input {
+    width: 60px !important;
+    text-align: center;
+    border: 2px solid var(--text-gold);
+}
+.cart-item .quantity button{
+    font-size: larger;
+}
+.cart-total {
+    color: var(--text-gold);
+    font-size: 1.25rem;
 }

@@ -1,112 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
-        }
-        .navbar {
-            background-color: #000;
-            border-bottom: 2px solid #ffd700; /* Golden color */
-        }
-        .navbar-brand, .nav-link {
-            color: #ffd700; /* Golden color */
-        }
-        .cart {
-            padding: 50px 0;
-        }
-        .cart-item {
-            border-bottom: 1px solid #ffd700; /* Golden color */
-            padding: 15px 0;
-        }
-        .cart-item h3 {
-            color: #ffd700; /* Golden color */
-        }
-        .cart-item img {
-            max-width: 100px;
-            height: auto;
-        }
-        .cart-total {
-            text-align: right;
-            font-size: 1.5rem;
-            color: #ffd700; /* Golden color */
-        }
-        .btn-gold {
-            background-color: #ffd700; /* Golden color */
-            color: #000;
-            border: none;
-        }
-        .btn-gold:hover {
-            background-color: #e5c03c; /* Slightly darker golden color */
-        }
-        .footer {
-            background-color: #000;
-            color: #ffd700; /* Golden color */
-            text-align: center;
-            padding: 20px 0;
-            border-top: 2px solid #ffd700; /* Golden color */
-        }
-    </style>
+    <title>Shopping Cart - Premium Brand</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">Premium Brand</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                  <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
+                  <a class="nav-link" href="products.html">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                  <a class="nav-link" href="about.html">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="contact.html">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn-gold" href="#">Cart</a>
+                  <a class="nav-link text-gold" href="cart.html"
+                    ><i class="fas fa-shopping-cart"></i> Cart</a
+                  >
                 </li>
             </ul>
         </div>
     </nav>
 
-    <main class="container cart">
-        <h2>Your Cart</h2>
-        <div class="cart-item row">
+    <main class="container cart mt-5">
+        <h2 class="text-gold">Your Cart</h2>
+        <div class="cart-item row align-items-center border-bottom py-3">
             <div class="col-md-2">
-                <img src="product.jpg" alt="Product Image">
+                <img src="product.jpg" alt="Product Image" class="img-fluid">
             </div>
             <div class="col-md-6">
-                <h3>Elegant Wedding Dress</h3>
-                <p>Quantity: 1</p>
+                <h3 class="text-white">Elegant Wedding Dress</h3>
                 <p>Price: $299.99</p>
+                <p>Quantity: 1</p>
+                
+                <div class="quantity input-group">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-gold"><i class="fa-solid fa-square-minus"></i></button>
+                    </div>
+                    <input type="text" value="1" class="form-control text-center">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-gold"><i class="fa-solid fa-square-plus"></i></button>
+                    </div>
+                </div>
+           
+                
             </div>
             <div class="col-md-4 text-right">
-                <p>Total: $299.99</p>
+                <p class="text-white">Total: $299.99</p>
+                <button class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i> Remove</button>
             </div>
         </div>
-        <div class="cart-total">
-            <h3>Total: $299.99</h3>
-            <a class="btn btn-gold" href="#">Proceed to Checkout</a>
+        <div class="cart-total text-right mt-4">
+            <h3 class="text-gold">Total: $299.99</h3>
+            <a class="btn btn-outline-gold" href="#">Proceed to Checkout</a>
         </div>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2024 Premium Brand. All rights reserved.</p>
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>&copy; 2024 Premium Brand. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
