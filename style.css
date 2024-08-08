@@ -6,6 +6,7 @@
   --theme-color: #ad7f43;
   --text-color: #e7d299;
   --text-gold: #e6ad63;
+  --text-gold-active: #815d2d;
   --btn-text-color: #4e3411;
   --btn-back-color: #ad7f43;
 }
@@ -20,6 +21,14 @@ body {
   color: var(--white);
   font-family: "Arial", sans-serif;
   scroll-behavior: smooth;
+}
+
+.text-bold{
+  font-weight: bold;
+}
+
+.text-bolder{
+  font-weight: bolder;
 }
 
 .text-gold {
@@ -150,6 +159,12 @@ body {
   color: #38260c !important;
   border: 2px solid rgba(0, 0, 0, 0);
 }
+
+.btn-outline-gold:active {
+  background-color: var(--text-gold-active);
+  color: #38260c !important;
+}
+
 @keyframes moveDown {
   0% {
     transform: translateY(-36px);
@@ -200,9 +215,13 @@ body {
 
 .card img {
   width: 100%;
-  min-height: 200px;
+  max-height: 200px;
   height: auto;
+  object-fit: scale-down; /* Ensures the image covers the area */
+  object-position: center; /* Centers the image */
+  filter: brightness(0.7) contrast(1.2); 
   border-bottom: 2px solid var(--theme-color);
+  
 }
 
 .card-body {
@@ -305,16 +324,34 @@ body {
 .cart-item .quantity {
     display: flex;
     align-items: center;
+    width: 150px;
+    outline: 0 !important;
+    box-shadow: none !important;
 }
 
 .cart-item .quantity input {
     width: 60px !important;
     text-align: center;
     border: 2px solid var(--text-gold);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    outline: 0 !important;
+    box-shadow: none !important;
 }
-.cart-item .quantity button{
-    font-size: larger;
+
+.cart-item .quantity button {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%; 
+  font-size: 1.5rem;
+  outline: 0 !important;
+  box-shadow: none !important;
 }
+
 .cart-total {
     color: var(--text-gold);
     font-size: 1.25rem;
